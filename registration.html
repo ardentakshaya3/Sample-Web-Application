@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Registration</title>
+
+<script>
+
+	function name_validation() {
+		var name=document.myform.name.value;
+		
+		if (name==null || name=="") {
+			alert("Please fill the field");
+			return false;
+	}
+	}
+	function email_validation() {
+		var x=document.myform.email.value;
+		var atposition=x.indexOf("@");
+		var dotposition=x.lastIndexOf(".");
+		if (x==null || x=="") {
+			alert("Please fill the field");	
+			return false;
+		}
+		if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length) {
+			alert("Enter a valid mail");
+			return false;
+		}
+	}
+	
+</script>
+
+</head>
+
+<body>
+
+	<div class="row" style="background-color:black">
+		<div class="col-lg-10">
+			<p style="color:white;font-size:15px;font-family:Comic Sans MS;margin-left:115px;margin-top:12px;"><i class="fa fa-envelope-o"></i>srp.akshaya@gmail.com</p>
+		</div>
+		<div class="col-lg-2">
+			<div style="margin-top:12px;">
+						<a href="https://twitter.com/TheLarkInn" class="fa fa-twitter"></a>
+						<a href="https://www.instagram.com/welovewebdesign/?hl=en" class="fa fa-instagram"></a>
+						<a href="https://in.pinterest.com/fromupnorth/web-design/" class="fa fa-pinterest"></a>
+						<a href="https://www.facebook.com/Webd2d/" class="fa fa-facebook"></a>
+					</div>
+		</div>
+	</div>
+	
+	<div id="first" class="row" style=" background-image:url('https://static1.squarespace.com/static/58ff84a28419c2b2a27cac73/t/590a1f0fdb29d60889f6ec0c/1496845997235/seo-sem-adwords-nicklaus-marketing-morristown-nj');background-repeat:no-repeat;background-size: 100% 573px;">
+		<div class="col-lg-3">
+			<img src="image.jpg" width="210" height="150" style="margin-left:120px;">
+		</div>
+		<div class="col-lg-9">
+				<div class="topnav">
+				  <a href="home.html">Home</a>
+				  
+				  <a href="coursedetails.html">Courses</a>
+				  <a href="registration.html">Registration</a>
+				  <a href="contact.html">Contact Us</a>     
+				</div>
+		</div>
+	</div>
+	
+	
+	<div class="row">
+		<div class="col-md-12">
+			<marquee style="font-size:20px;background-color:black;color:white;font-family:Georgia;">Courses start from 10/06/2018. Last date for registration is 17/06/2018.</marquee>
+		</div>
+	</div>
+	
+	<br>
+	<div class="row">
+	<div class="col-md-2">
+	</div>
+	<div class="col-md-8">
+	<form class="contact-form " id="contact" method="post" action="sendmail.php">
+								
+								<div class="row">
+								
+								
+								        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <select name="coursename" required style="height:45px;width:100%;
+												border: 1px solid #ddd;">
+												<option value="" disabled="disabled" selected>Select Your Course</option>
+												<option value="HTML">HTML</option>
+												<option value="CSS">CSS</option>
+												<option value="JavaScript">JavaScript</option>
+												<option value="HTML">Python</option>
+												<option value="PHP">PHP</option>
+												<option value="Ruby">Ruby</option>
+												<option value="HTML/CSS">HTML/CSS</option>
+												<option value="HTML/CSS/JavaScript">HTML/CSS/JavaScript</option>
+												</select>
+                                            </div>
+                                        </div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <select name="trainingtype" required style="height:45px;width:100%;
+												border: 1px solid #ddd;">
+												<option value="" disabled="disabled" selected>Select Session</option>
+												<option value="Class Room Training">Morning session</option>
+												<option value="Online Training">Evening session</option>
+												
+												</select>
+                                                
+                                            </div>
+                                        </div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <input type="text" placeholder="Name*" class="form-control" name="name" id="form-name" data-error="Name field is required" required>
+                                                
+                                            </div>
+                                        </div>
+								
+									    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <input type="email" placeholder="Email*" class="form-control" name="email" data-error="Email field is required" onsubmit=return "email_validation()" required>
+                                                
+                                            </div>
+                                        </div>
+									
+									    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group">
+                                                <input type="text" placeholder="Phone*" class="form-control" name="phone" id="form-name" data-error="Phone number is required" required>
+                                                
+                                            </div>
+                                        </div>
+										
+									    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <textarea placeholder="Message*" class="textarea form-control" name="message" id="form-message" rows="8" cols="20" data-error="Message field is required" required></textarea>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+									
+									 <div class="col-md-12 col-lg-12">
+										<button class="btn-text" type="submit" id="submit" name="submit" style = "float:right">
+											Register
+										</button>
+									</div>
+								</div>
+							</form>
+	</div>
+	</div><br>
+	<!-- Footer -->
+	<div class="row">
+	<div class="footer">
+	<br><br>
+		<div class="col-md-4">
+			<p style="color:white;font-family:Times New Roman;font-size:17px;margin-top:4%;margin-left:5%;">© All rights reserved:2018</p>
+		</div>
+		<div class="col-md-8">
+			<p style="text-align:right;padding-right:25px;font-size:15px;margin-top:2.3%;font-family:Georgia;color:white;">Designed by Akshaya</p>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
