@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Contact</title>
+
+<script>
+
+	function name_validation() {
+		var name=document.myform.name.value;
+		
+		if (name==null || name=="") {
+			alert("Please fill the field");
+			return false;
+	}
+	}
+	function email_validation() {
+		var x=document.myform.email.value;
+		var atposition=x.indexOf("@");
+		var dotposition=x.lastIndexOf(".");
+		if (x==null || x=="") {
+			alert("Please fill the field");	
+			return false;
+		}
+		if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length) {
+			alert("Enter a valid mail");
+			return false;
+		}
+	}
+	
+</script>
+
+</head>
+
+<body>
+
+	<div class="row" style="background-color:black">
+		<div class="col-lg-10">
+			<p style="color:white;font-size:15px;font-family:Comic Sans MS;margin-left:115px;margin-top:12px;"><i class="fa fa-envelope-o"></i>srp.akshaya@gmail.com</p>
+		</div>
+		<div class="col-lg-2">
+			<div style="margin-top:12px;">
+						<a href="https://twitter.com/TheLarkInn" class="fa fa-twitter"></a>
+						<a href="https://www.instagram.com/welovewebdesign/?hl=en" class="fa fa-instagram"></a>
+						<a href="https://in.pinterest.com/fromupnorth/web-design/" class="fa fa-pinterest"></a>
+						<a href="https://www.facebook.com/Webd2d/" class="fa fa-facebook"></a>
+					</div>
+		</div>
+	</div>
+	
+	<div id="first" class="row" style=" background-image:url('https://static1.squarespace.com/static/58ff84a28419c2b2a27cac73/t/590a1f0fdb29d60889f6ec0c/1496845997235/seo-sem-adwords-nicklaus-marketing-morristown-nj');background-repeat:no-repeat;background-size: 100% 573px;">
+		<div class="col-lg-3">
+			<img src="image.jpg" width="210" height="150" style="bottom:0;margin-left:120px;">
+		</div>
+		<div class="col-lg-9">
+				<div class="topnav">
+				  <a href="home.html">Home</a>
+				  
+				  <a href="coursedetails.html">Courses</a>
+				  <a href="registration.html">Registration</a>
+				  <a href="contact.html">Contact Us</a>     
+				</div>
+		</div>
+	</div>
+	
+	<!-- Content -->
+<br><br>
+<div id="contact">
+		<p style="color:#192D6D;margin-left:50px;font-size:22px;font-family:Georgia;"><b>Contact Us</b><br><br></p>
+
+		<div class="row">
+			<div class="col-md-9">
+				
+				<form name="MyForm" method="post" action="sendmail.php">
+				
+				<div class="row">
+				<div class="col-md-10">
+				<div class="row">
+						<div class="col-md-6">
+							<p id="one" class="form-group">First Name: <input style="margin-left:100px;border-color:#767373; border: 2px solid #767373;border-radius: 6px;" type="text" name="fname" onsubmit="return name_validation()" required> </p>
+						</div>
+						
+						<div class="col-md-6">
+						<p id="one" class="form-group">Last Name:<input style="margin-left:100px;border-color:#767373; border: 2px solid #767373;border-radius: 6px;" type="text" name="lname" onsubmit="return name_validation()" required></p> 
+							<br>
+						</div>
+						</div>
+						<div class="row">
+						<div class="col-md-6">
+								<p id="one" class="form-group">Email: <input style="margin-left:100px;border-color:#767373; border: 2px solid #767373;border-radius: 6px;" type="text" name="email" onsubmit="return email_validation()" required></p>
+						</div>
+						
+						<div class="col-md-6">
+						<p id="one" class="form-group">Phone:<input style="margin-left:100px;border-color:#767373; border: 2px solid #767373;border-radius:6px;" type="text" name="fname" maxlength="10" required></p>
+						</div>
+						
+						<div class="col-md-6">
+							<p id="one" class="form-group">Message:<br><textarea name="message" style="border-color:#767373; border: 2px solid #767373;border-radius: 6px;width:450px; height:200px;margin-left:100px;" required></textarea></p>
+						</div>
+						</div>
+						</div>
+				<br>
+				<input style="margin-left:42%;font-family:Times;font-size:20px;width:200px;line-height:2;background-color:#EEEEF1;border:2px solid #CACACD;border-radius:50px;" type="submit" value="Submit">
+				
+				</form>
+			</div>
+			</div>
+			<div class="col-md-2">
+				<p style="width:160px;color:black;font-size:25px;margin-left:50px;font-family:Georgia;color:#192D6D"><b>Address</b><br> </p>
+				<address style="width:160px;color:black;font-size:18px;line-height:2;margin-left:51px;font-family:Georgia;color:#192D6D">
+			Flat No:302<br>RS Towers<br>Doctor's Colony<br>Madhapur<br>Hyderabad<br>Telangana 500081.
+				</address>
+		
+			</div>
+			</div>
+			
+		
+		<br><br>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.479792299991!2d78.39125391461268!3d17.43673528804906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb915afb51f4cd%3A0xf45f51c35a27a8f3!2sRS+Towers!5e0!3m2!1sen!2sin!4v1527856805462" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>	
+	</div>
+	
+	<!-- Footer -->
+	<div class="row">
+	<div class="footer">
+	<br><br>
+		<div class="col-md-4">
+			<p style="color:white;font-family:Times New Roman;font-size:17px;margin-top:4%;margin-left:5%;">© All rights reserved:2018</p>
+		</div>
+		<div class="col-md-8">
+			<p style="text-align:right;padding-right:25px;font-size:15px;margin-top:2.3%;font-family:Georgia;color:white;">Designed by Akshaya</p>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
